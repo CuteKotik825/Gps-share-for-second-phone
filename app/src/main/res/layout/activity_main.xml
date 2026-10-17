@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPS-мост"
+            android:textColor="#FFB8B8B8"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Роль этого телефона"
+            android:textColor="#FF808080" />
+
+        <RadioGroup
+            android:id="@+id/rgRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbSender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отправитель (новый телефон, хороший GPS)" />
+
+            <RadioButton
+                android:id="@+id/rbReceiver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Получатель (старый телефон, навигатор)" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Канал связи"
+            android:textColor="#FF808080" />
+
+        <RadioGroup
+            android:id="@+id/rgTransport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wi-Fi / точка доступа" />
+
+            <RadioButton
+                android:id="@+id/rbBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bluetooth" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/boxWifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:hint="IP другого телефона (необязательно)"
+                android:inputType="phone"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etPort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Порт"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="45678" />
+
+            <EditText
+                android:id="@+id/etKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ключ (необязательно, одинаковый на обоих)"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tvMyIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:textColor="#FF808080"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/boxBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spBt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnBtRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Обновить список" />
+
+            <TextView
+                android:id="@+id/tvBtHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF808080"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Запустить" />
+
+        <Button
+            android:id="@+id/btnRootMock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Выдать права mock через root" />
+
+        <Button
+            android:id="@+id/btnDevSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Настройки разработчика" />
+
+        <Button
+            android:id="@+id/btnScreenOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Погасить экран (root)" />
+
+        <Button
+            android:id="@+id/btnBattery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Не засыпать (оптимизация батареи)" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:text="Остановлено"
+            android:textColor="#FFB8B8B8"
+            android:textSize="13sp"
+            android:typeface="monospace" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Чисто чёрный фон и приглушённые цвета: на AMOLED чёрные пиксели не светятся -->
+    <style name="Theme.GpsBridge" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:textColorPrimary">#FFB8B8B8</item>
+        <item name="android:textColorSecondary">#FF808080</item>
+        <item name="android:textColorHint">#FF555555</item>
+        <item name="android:colorAccent">#FF5C8F5C</item>
+        <item name="android:colorButtonNormal">#FF1E1E1E</item>
+        <item name="android:colorControlNormal">#FF666666</item>
+        <item name="android:colorControlActivated">#FF5C8F5C</item>
+    </style>
+</resources>
